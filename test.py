@@ -1,6 +1,7 @@
 # my_module.py
 
-def my_function():
+def createFolder(folderPath, folderName):
     from google.colab import drive
     drive.mount('/content/gdrive')
-    print("Hello from my_function in my_module!")
+    os.mkdir(folderPath + '/' + rawDataFolderName)
+    print("Folder creado correctamente")
