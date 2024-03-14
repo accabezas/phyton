@@ -4,14 +4,19 @@ class Librarian:
     self.projectName = projectName
 
   def createProjectFolders(self):
-    #* Google drive mount
+    #* Imports
     from google.colab import drive
-    drive.mount('/content/gdrive')
-    #* Folders Creation
     import os
-    os.mkdir(self.projectPath + '/' + self.projectName)
-    os.mkdir(self.projectPath + '/' + self.projectName + '/1. Raw')
-    os.mkdir(self.projectPath + '/' + self.projectName + '/2. Output')
+    
+    #* Google drive mount
+    if not os.path.exists('/content/gdrive'):
+      drive.mount('/content/gdrive')
+      
+    #* Folders Creation
+    if not os.path.exists(self.projectPath + '/' + self.projectName):
+      os.mkdir(self.projectPath + '/' + self.projectName)
+      os.mkdir(self.projectPath + '/' + self.projectName + '/1. Raw')
+      os.mkdir(self.projectPath + '/' + self.projectName + '/2. Output')
 
   def getRawFilesList(self):
     import os
