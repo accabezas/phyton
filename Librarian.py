@@ -20,15 +20,15 @@ class Librarian:
 
   def getRawFilesList(self):
     import os
-    files = os.listdir(self.projectPath + '/' + self.projectName + '/Raw')
+    files = os.listdir(self.projectPath + '/' + self.projectName + '/1. Raw')
     return files
 
   def getRawFolderPath(self):
-    rawFolderPath = self.projectPath + '/' + self.projectName + '/Raw'
+    rawFolderPath = self.projectPath + '/' + self.projectName + '/1. Raw'
     return rawFolderPath
 
   def saveOutput(self, fileName):
     import shutil
-    outputFolder = self.projectPath + '/' + self.projectName + '/Output'
+    outputFolder = self.projectPath + '/' + self.projectName + '/2. Output'
     print(fileName)
     shutil.copy("/content/" + fileName, outputFolder + "/" + fileName)
