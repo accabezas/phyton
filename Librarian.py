@@ -32,3 +32,9 @@ class Librarian:
     outputFolder = self.projectPath + '/' + self.projectName + '/2. Output'
     print(fileName)
     shutil.copy("/content/" + fileName, outputFolder + "/" + fileName)
+    
+  def changeRawFileName(self, inputFileName, outputFileName):
+    import shutil
+    inputFolder = self.projectPath + '/' + self.projectName + '/1. Raw'
+    outputFolder = self.projectPath + '/' + self.projectName + '/2. Output'
+    shutil.copy(inputFolder + "/" + inputFileName, outputFolder + "/" + outputFileName)
