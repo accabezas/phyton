@@ -13,7 +13,7 @@ class Librarian:
     os.mkdir(self.projectPath + '/' + self.projectName + '/1. Raw')
     os.mkdir(self.projectPath + '/' + self.projectName + '/2. Output')
 
-  def getRawFilePaths(self):
+  def getRawFilesList(self):
     import os
     files = os.listdir(self.projectPath + '/' + self.projectName + '/Raw')
     return files
