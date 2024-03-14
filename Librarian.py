@@ -10,8 +10,8 @@ class Librarian:
     #* Folders Creation
     import os
     os.mkdir(self.projectPath + '/' + self.projectName)
-    os.mkdir(self.projectPath + '/' + self.projectName + '/Raw')
-    os.mkdir(self.projectPath + '/' + self.projectName + '/Output')
+    os.mkdir(self.projectPath + '/' + self.projectName + '/1. Raw')
+    os.mkdir(self.projectPath + '/' + self.projectName + '/2. Output')
 
   def getRawFilePaths(self):
     import os
