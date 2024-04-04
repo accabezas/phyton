@@ -26,6 +26,10 @@ class Librarian:
   def getRawFolderPath(self):
     rawFolderPath = self.projectPath + '/' + self.projectName + '/1. Raw'
     return rawFolderPath
+  
+  def getOutputFolderPath(self):
+    outputFolderPath = self.projectPath + '/' + self.projectName + '/2. Output'
+    return outputFolderPath
 
   def saveOutput(self, fileName):
     import shutil
